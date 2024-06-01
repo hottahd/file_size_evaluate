@@ -127,6 +127,7 @@ if __name__ == "__main__":
 
     # ディレクトリサイズの計算と結果の保存
     for caseid in directories:
+        print('\033[1m' + caseid + '\033[0m')
         dir_path = os.path.join(base_path, caseid)
         total_size, unit = get_total_file_size(dir_path)
         update_results_file(results_file_path, total_size, unit, caseid, dir_path)
